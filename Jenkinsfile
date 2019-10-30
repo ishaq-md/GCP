@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage ('checkout'){
             steps {
-                git branch: 'master', url: 'https://github.com/ishaqmdgcp/terraform.git'
+                git branch: 'master', url: 'https://github.com/ishaqmdgcp/GCP.git'
             }
         }
       
@@ -23,7 +23,7 @@ pipeline {
         
          stage('Provision infrastructure') {
             steps {
-                dir("01-hello-world") 
+                dir("") 
                 {
                 sh 'terraform init'
                 sh 'terraform plan'
